@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Foto</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f2f2f2;
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 48px;
+      margin-bottom: 40px;
+      color: #4a90e2;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .image-container {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    .image-container img {
+      width: 300px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      margin: 5% auto;
+      display: block;
+      max-width: 80%;
+    }
+
+    .modal-content img {
+      width: 100%;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .image-container img {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .modal-content {
+        margin: 20% auto;
+        max-width: 95%;
+      }
+
+      .close {
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+      }
+
+      .caption {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="Logo_SMAN_1_PKL_Lesung_HD_.png" alt="Logo" class="logo">
+  <h1>Galeri Foto Kenangan</h1>
+
+  <div class="image-container" onclick="openModal('myModal1')">
+    <img src="1.jpg" alt="Contoh Foto 1">
+    <div class="caption">Ini adalah keterangan foto pertama</div>
+  </div>
+
+  <div class="image-container" onclick="openModal('myModal2')">
+    <img src="2.jpg" alt="Contoh Foto 2">
+    <div class="caption">Ini adalah keterangan foto kedua</div>
+  </div>
+
+  <div class="image-container" onclick="openModal('myModal3')">
+    <img src="3.jpg" alt="Contoh Foto 3">
+    <div class="caption">Ini adalah keterangan foto kedua</div>
+  </div>
+
+  <div class="image-container" onclick="openModal('myModal4')">
+    <img src="4.jpg" alt="Contoh Foto 4">
+    <div class="caption">Ini adalah keterangan foto kedua</div>
+  </div>
+
+  <div class="image-container" onclick="openModal('myModal5')">
+    <img src="5.jpg" alt="Contoh Foto 5">
+    <div class="caption">Ini adalah keterangan foto kedua</div>
+  </div>
+
+  <div class="image-container" onclick="openModal('myModal6')">
+    <img src="6.jpg" alt="Contoh Foto 6">
+    <div class="caption">Ini adalah keterangan foto kedua</div>
+  </div>
+
+  <div class="image-container" onclick="openModal('myModal7')">
+    <img src="7.jpg" alt="Contoh Foto 7">
+    <div class="caption">Ini adalah keterangan foto kedua</div>
+  </div>
+
+  <div class="image-container" onclick="openModal('myModal8')">
+    <img src="8.jpg" alt="Contoh Foto 8">
+    <div class="caption">Ini adalah keterangan foto kedua</div>
+  </div>
+  <!-- Modal 1 -->
+  <div id="myModal1" class="modal" onclick="closeModal('myModal1')">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <img src="1.jpg" alt="Contoh Foto 1 Diperbesar">
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="myModal2" class="modal" onclick="closeModal('myModal2')">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <img src="2.jpg" alt="Contoh Foto 2 Diperbesar">
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="myModal3" class="modal" onclick="closeModal('myModal3')">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <img src="3.jpg" alt="Contoh Foto 3 Diperbesar">
+    </div>
+  </div>
+
+   <!-- Modal 4 -->
+  <div id="myModal4" class="modal" onclick="closeModal('myModal4')">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <img src="4.jpg" alt="Contoh Foto 4 Diperbesar">
+    </div>
+  </div>
+
+   <!-- Modal 3 -->
+  <div id="myModal5" class="modal" onclick="closeModal('myModal5')">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <img src="5.jpg" alt="Contoh Foto 5 Diperbesar">
+    </div>
+  </div>
+
+   <!-- Modal 3 -->
+  <div id="myModal6" class="modal" onclick="closeModal('myModal6')">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <img src="6.jpg" alt="Contoh Foto 6 Diperbesar">
+    </div>
+  </div>
+
+   <!-- Modal 3 -->
+  <div id="myModal7" class="modal" onclick="closeModal('myModal7')">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <img src="7.jpg" alt="Contoh Foto 7 Diperbesar">
+    </div>
+  </div>
+
+   <!-- Modal 3 -->
+  <div id="myModal8" class="modal" onclick="closeModal('myModal8')">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <img src="8.jpg" alt="Contoh Foto 8 Diperbesar">
+    </div>
+  </div>
+
+  <script>
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = "block";
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = "none";
+    }
+  </script>
+</body>
+</html>
