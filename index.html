@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galeri Foto</title>
+  
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
@@ -79,7 +80,72 @@
       cursor: pointer;
     }
 
-    
+    .header-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .profile-pic {
+      width: 200px;
+      border-radius: 50%;
+      /* Animasi dasar */
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Animasi mengambang */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    /* Animasi berputar */
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Animasi berdenyut */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Animasi bergoyang */
+    @keyframes shake {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(5deg); }
+      50% { transform: rotate(0deg); }
+      75% { transform: rotate(-5deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    /* Animasi melompat */
+    @keyframes jump {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
 
     @media (max-width: 600px) {
       body {
@@ -109,52 +175,63 @@
       .caption {
         font-size: 14px;
       }
+      
+      .profile-pic {
+        width: 150px;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="Logo_SMAN_1_PKL_Lesung_HD_.png" alt="Logo" class="logo">
-  <h1>INFORMASI SPMB SMAN 1 PANGKALAN LESUNG 2025</h1>
+  <div class="header-top">
+    <img src="Logo_SMAN_1_PKL_Lesung_HD_.png" alt="Logo" class="logo">
+  </div>
+  <h1>Galeri Foto Kenangan</h1>
+
+  <div>
+    <img src="Avatar.png" alt="Foto Orang" class="profile-pic" id="animatedProfile">
+  </div>
 
   <div class="image-container" onclick="openModal('myModal1')">
     <img src="1.jpg" alt="Contoh Foto 1">
-    <div class="caption">SPMB SMANSA LESUNG 2025</div>
+    <div class="caption">Ini adalah keterangan foto pertama</div>
   </div>
 
   <div class="image-container" onclick="openModal('myModal2')">
     <img src="2.jpg" alt="Contoh Foto 2">
-    <div class="caption">Alur SPMB 1</div>
+    <div class="caption">Ini adalah keterangan foto kedua</div>
   </div>
 
   <div class="image-container" onclick="openModal('myModal3')">
     <img src="3.jpg" alt="Contoh Foto 3">
-    <div class="caption">Alur SPMB 2</div>
+    <div class="caption">Ini adalah keterangan foto kedua</div>
   </div>
 
   <div class="image-container" onclick="openModal('myModal4')">
     <img src="4.jpg" alt="Contoh Foto 4">
-    <div class="caption">TIMELINE SPMB 1</div>
+    <div class="caption">Ini adalah keterangan foto kedua</div>
   </div>
 
   <div class="image-container" onclick="openModal('myModal5')">
     <img src="5.jpg" alt="Contoh Foto 5">
-    <div class="caption">TIMELINE SPMB 2</div>
+    <div class="caption">Ini adalah keterangan foto kedua</div>
   </div>
 
   <div class="image-container" onclick="openModal('myModal6')">
     <img src="6.jpg" alt="Contoh Foto 6">
-    <div class="caption">PERSYARATAN</div>
+    <div class="caption">Ini adalah keterangan foto kedua</div>
   </div>
 
   <div class="image-container" onclick="openModal('myModal7')">
     <img src="7.jpg" alt="Contoh Foto 7">
-    <div class="caption">JALUR & KUOTA</div>
+    <div class="caption">Ini adalah keterangan foto kedua</div>
   </div>
 
   <div class="image-container" onclick="openModal('myModal8')">
     <img src="8.jpg" alt="Contoh Foto 8">
-    <div class="caption">Contact Person</div>
+    <div class="caption">Ini adalah keterangan foto kedua</div>
   </div>
+
   <!-- Modal 1 -->
   <div id="myModal1" class="modal" onclick="closeModal('myModal1')">
     <span class="close">&times;</span>
@@ -179,7 +256,7 @@
     </div>
   </div>
 
-   <!-- Modal 4 -->
+  <!-- Modal 4 -->
   <div id="myModal4" class="modal" onclick="closeModal('myModal4')">
     <span class="close">&times;</span>
     <div class="modal-content">
@@ -187,7 +264,7 @@
     </div>
   </div>
 
-   <!-- Modal 3 -->
+  <!-- Modal 5 -->
   <div id="myModal5" class="modal" onclick="closeModal('myModal5')">
     <span class="close">&times;</span>
     <div class="modal-content">
@@ -195,7 +272,7 @@
     </div>
   </div>
 
-   <!-- Modal 3 -->
+  <!-- Modal 6 -->
   <div id="myModal6" class="modal" onclick="closeModal('myModal6')">
     <span class="close">&times;</span>
     <div class="modal-content">
@@ -203,7 +280,7 @@
     </div>
   </div>
 
-   <!-- Modal 3 -->
+  <!-- Modal 7 -->
   <div id="myModal7" class="modal" onclick="closeModal('myModal7')">
     <span class="close">&times;</span>
     <div class="modal-content">
@@ -211,7 +288,7 @@
     </div>
   </div>
 
-   <!-- Modal 3 -->
+  <!-- Modal 8 -->
   <div id="myModal8" class="modal" onclick="closeModal('myModal8')">
     <span class="close">&times;</span>
     <div class="modal-content">
@@ -227,33 +304,61 @@
     function closeModal(modalId) {
       document.getElementById(modalId).style.display = "none";
     }
+
+    // Animasi untuk gambar profil
+    const profilePic = document.getElementById('animatedProfile');
+    
+    // Pilihan animasi (bisa diganti sesuai preferensi)
+    let currentAnimation = 'float'; // Default: animasi mengambang
+    
+    // Ganti animasi saat gambar diklik
+    profilePic.addEventListener('click', function() {
+      const animations = ['float', 'spin', 'pulse', 'shake', 'jump'];
+      const nextIndex = (animations.indexOf(currentAnimation) + 1) % animations.length;
+      currentAnimation = animations[nextIndex];
+      
+      // Hapus semua kelas animasi
+      profilePic.style.animation = 'none';
+      void profilePic.offsetWidth; // Trigger reflow
+      
+      // Terapkan animasi baru
+      if (currentAnimation === 'spin') {
+        profilePic.style.animation = 'spin 2s linear infinite';
+      } else if (currentAnimation === 'pulse') {
+        profilePic.style.animation = 'pulse 1.5s ease-in-out infinite';
+      } else if (currentAnimation === 'shake') {
+        profilePic.style.animation = 'shake 0.5s ease-in-out infinite';
+      } else if (currentAnimation === 'jump') {
+        profilePic.style.animation = 'jump 1s ease-in-out infinite';
+      } else {
+        profilePic.style.animation = 'float 3s ease-in-out infinite';
+      }
+    });
   </script>
 
   <script>
-   document.addEventListener('contextmenu', event => event.preventDefault());
-document.onkeydown = function(e) {
-    if(e.keyCode == 123) {
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.onkeydown = function(e) {
+      if(e.keyCode == 123) {
         return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
         return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
         return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
         return false;
-    }
-    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+      }
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
         return false;
+      }
     }
-}
- </script>
- 
+  </script>
 
   <footer>
-  <h1>Hak Cipta &copy; SMAN 1 Pangkalan Lesung (Suheri Ramadhan)</h1>
-</footer>
- 
+    <h1>Hak Cipta &copy; SMAN 1 Pangkalan Lesung (Suheri Ramadhan)</h1>
+  </footer>
 </body>
 </html>
